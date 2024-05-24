@@ -1,11 +1,11 @@
 # shortener_app/schemas.py
 
-from pydantic import BaseModel, validator
+from typing import Optional
+from pydantic import BaseModel
 
 
 class URLBase(BaseModel):
     target_url: str
-    custom_key: str = ""
 
 
 class URL(URLBase):
@@ -24,3 +24,4 @@ class URLInfo(URL):
     """
     url: str
     admin_url: str
+

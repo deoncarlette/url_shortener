@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     env_name: str = "Local"
     base_url: str = "http://localhost:8000"
     db_url: str = "sqlite:///./shortener.db"
+    origins: list = ["*"]
 
     class Config:
         env_file = ".env"

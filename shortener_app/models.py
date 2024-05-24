@@ -10,7 +10,6 @@ class URL(Base):
 
     id = Column(Integer, primary_key=True)
     key = Column(String, unique=True, index=True)
-    custom_key = Column(String, index=True)
     secret_key = Column(String, unique=True, index=True)
     target_url = Column(String, index=True)
     is_active = Column(Boolean, default=True)
